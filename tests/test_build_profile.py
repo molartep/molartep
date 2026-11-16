@@ -27,6 +27,16 @@ class ProfileTests(unittest.TestCase):
         self.assertEqual(stats['lines_of_code'], stats['added'] - stats['deleted'])
         self.assertEqual(count.call_args.args[1], {'c'})
 
+    def test_image_versions_follow_content_and_are_stable(self):
+        readme = '<source srcset="./dark_mode.svg?v=2"><img src="./light_mode.svg">'
+        outputs = {'dark': '<svg>dark</svg>', 'light': '<svg>light</svg>'}
+        updated = profile.versioned_readme(readme, outputs)
+        self.assertNotEqual(updated, readme)
+        self.assertEqual(profile.versioned_readme(updated, outputs), updated)
+        changed = profile.versioned_readme(updated, {**outputs, 'dark': '<svg>new</svg>'})
+        self.assertNotEqual(updated.split('>')[0], changed.split('>')[0])
+        self.assertEqual(updated.split('>')[1], changed.split('>')[1])
+
     def test_failed_refresh_preserves_last_generated_files(self):
         paths = [profile.ROOT / p for p in ('assets/stats.json', 'dark_mode.svg', 'light_mode.svg')]
         before = [p.read_bytes() for p in paths]

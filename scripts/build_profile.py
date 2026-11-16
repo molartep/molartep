@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Render both profile themes; optionally refresh public GitHub stats."""
 import argparse
+import hashlib
 from datetime import datetime, timezone
 from html import escape
 import json
 import os
+import re
 import subprocess
 import tempfile
 from pathlib import Path
@@ -170,6 +172,17 @@ def render(theme, stats):
     return ''.join(parts)
 
 
+def versioned_readme(readme, outputs):
+    """Change each image URL only when its rendered SVG content changes."""
+    for theme, svg in outputs.items():
+        digest = hashlib.sha256(svg.encode('utf-8')).hexdigest()[:16]
+        readme = re.sub(
+            rf'\./{theme}_mode\.svg(?:\?v=[^"\s]+)?',
+            f'./{theme}_mode.svg?v={digest}', readme,
+        )
+    return readme
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--refresh', action='store_true', help='Fetch public GitHub stats before rendering')
@@ -178,10 +191,13 @@ def main():
     # Complete all requests before replacing the last successful snapshot.
     stats = fetch_stats() if args.refresh else json.loads(stats_path.read_text())
     outputs = {theme: render(theme, stats) for theme in ('dark', 'light')}
+    readme_path = ROOT / 'README.md'
+    readme = versioned_readme(readme_path.read_text(), outputs)
     if args.refresh:
         stats_path.write_text(json.dumps(stats, indent=2) + '\n')
     for theme, svg in outputs.items():
         (ROOT / f'{theme}_mode.svg').write_text(svg)
+    readme_path.write_text(readme)
 
 
 if __name__ == '__main__':

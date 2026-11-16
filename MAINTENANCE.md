@@ -36,3 +36,7 @@ git diff --check
 ```
 
 Preview both SVGs after changing the layout. SVG text uses local monospace fallbacks; character positions in the portrait are explicit to retain alignment across systems. The Markdown content below the card remains readable on narrow screens and by assistive technology.
+
+## Image cache refresh
+
+Each build assigns both README image URLs a SHA-256 version derived from the corresponding generated SVG. A changed card gets a new URL; unchanged cards keep their URL. The stats workflow commits README.md together with the generated SVGs so the profile requests updated images.
