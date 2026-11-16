@@ -1,0 +1,37 @@
+name: Refresh public profile stats
+on:
+  schedule:
+    - cron: '23 11 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_profile.py'
+      - 'assets/portrait.txt'
+      - 'assets/portrait.json'
+      - '.github/workflows/update-profile.yml'
+permissions:
+  contents: write
+concurrency:
+  group: profile-stats
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Refresh and render
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/build_profile.py --refresh
+      - name: Commit changed stats and cards
+        run: |
+          git add assets/stats.json dark_mode.svg light_mode.svg
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Refresh public profile stats'
+          git push
