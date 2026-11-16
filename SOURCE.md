@@ -1,1 +1,0 @@
-Inspired by https://github.com/Andrew6rant/Andrew6rant. Static SVG implementation; no scheduled jobs, Python statistics updater, or API calls. Edit the SVG text directly to customize.
