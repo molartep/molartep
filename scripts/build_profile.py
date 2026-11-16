@@ -137,7 +137,7 @@ def render(theme, stats):
             parts.append('</a>')
 
     def section(y, title):
-        text(left, y, title + ' ' + '.' * (columns - len(title) - 1), muted, 14)
+        text(left, y, title, muted, 14)
 
     text(32, 646, 'MARTIN OLARTE', fg, 17)
     text(32, 668, 'AI / DATA / AUTOMATION', muted, 12)
