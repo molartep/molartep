@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530" font-family="Consolas, Menlo, monospace" font-size="16">
+<rect width="985" height="530" rx="15" fill="#161b22"/>
+<text fill="#c9d1d9" xml:space="preserve">
+<tspan x="18" y="30">  __  __    _    ____ _____ ___ _   _</tspan>
+<tspan x="18" y="54"> |  \/  |  / \  |  _ \_   _|_ _| \ | |</tspan>
+<tspan x="18" y="78"> | |\/| | / _ \ | |_) || |  | ||  \| |</tspan>
+<tspan x="18" y="102"> | |  | |/ ___ \|  _ &lt; | |  | || |\  |</tspan>
+<tspan x="18" y="126"> |_|  |_/_/   \_\_| \_\|_| |___|_| \_|</tspan>
+<tspan x="18" y="150"></tspan>
+<tspan x="18" y="174">        MARTIN OLARTE</tspan>
+<tspan x="18" y="198"></tspan>
+<tspan x="18" y="222">        &gt; software engineering</tspan>
+<tspan x="18" y="246">        &gt; artificial intelligence</tspan>
+<tspan x="18" y="270">        &gt; data and automation</tspan>
+<tspan x="18" y="294"></tspan>
+<tspan x="18" y="318">        $ ls projects/</tspan>
+<tspan x="18" y="342">          resume-lens/</tspan>
+<tspan x="18" y="366">          company-explorer/</tspan>
+<tspan x="18" y="390"></tspan>
+<tspan x="18" y="414">        $ echo $STATUS</tspan>
+<tspan x="18" y="438">          Building useful things.</tspan>
+</text>
+<text x="465" y="30" fill="#c9d1d9">— martin@github ───────────────────────────</text>
+<text x="465" y="56"><tspan fill="#616e7f">. </tspan><tspan fill="#ffa657">OS</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#a5d6ff">macOS / Linux</tspan></text>
+<text x="465" y="82"><tspan fill="#616e7f">. </tspan><tspan fill="#ffa657">Focus</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#a5d6ff">AI, data, automation</tspan></text>
+<text x="465" y="108"><tspan fill="#616e7f">. </tspan><tspan fill="#ffa657">Role</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#a5d6ff">Software Engineer</tspan></text>
+<text x="465" y="134"><tspan fill="#616e7f">. </tspan><tspan fill="#ffa657">Editor</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#a5d6ff">VS Code</tspan></text>
+<text x="465" y="186"><tspan fill="#616e7f">. </tspan><tspan fill="#ffa657">Languages.Programming</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#a5d6ff">Python, JavaScript, C#</tspan></text>
+<text x="465" y="212"><tspan fill="#616e7f">. </tspan><tspan fill="#ffa657">Languages.Other</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#a5d6ff">SQL, HTML, CSS, JSON</tspan></text>
+<text x="465" y="238"><tspan fill="#616e7f">. </tspan><tspan fill="#ffa657">Languages.Real</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#a5d6ff">Spanish, English</tspan></text>
+<text x="465" y="290" fill="#c9d1d9">— Projects ───────────────────────────</text>
+<text x="465" y="316"><tspan fill="#616e7f">. </tspan><tspan fill="#ffa657">Repository.1</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#a5d6ff">github.com/molartep/resume-lens</tspan></text>
+<text x="465" y="342"><tspan fill="#616e7f">. </tspan><tspan fill="#ffa657">Repository.2</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#a5d6ff">Company Explorer</tspan></text>
+<text x="465" y="394" fill="#c9d1d9">— Contact ───────────────────────────</text>
+<text x="465" y="420"><tspan fill="#616e7f">. </tspan><tspan fill="#ffa657">GitHub</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#a5d6ff">github.com/molartep</tspan></text>
+<text x="465" y="446"><tspan fill="#616e7f">. </tspan><tspan fill="#ffa657">Location</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#a5d6ff">Colombia</tspan></text>
+</svg>
