@@ -92,7 +92,6 @@ def render(theme, stats):
 <rect width="1100" height="700" rx="18" fill="{bg}"/>
 <rect x="16" y="16" width="1068" height="668" rx="12" fill="{panel}"/>
 <g font-family="Menlo,Consolas,DejaVu Sans Mono,monospace" font-size="15" fill="{fg}">
-<text x="36" y="49" fill="{value}">$ whoami</text>
 <text x="478" y="49" fill="{value}">molartep@github</text>
 <path d="M454 72V648" stroke="{muted}" opacity=".3"/>
 ''']
